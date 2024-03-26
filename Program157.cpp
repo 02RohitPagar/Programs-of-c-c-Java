@@ -31,37 +31,16 @@ class String
   {
     cout<<"string is:"<<str<<endl;
   }
-  int countCapital()
-{
-    int iCnt=0;
-    char *temp=str;
-    
-    while (*temp!='\0')
-    {
-        if (*temp>='A')&&(*temp<='Z')
-        {
-            iCnt++;
-        }
-        temp++;
-    }
-    return iCnt;
-}
-
 };
 
 int main()
 {
   String *sobj=new String(30);
-  int iRet=0;
 
   sobj->Accept();
   sobj->Display();
   
-  iRet=sobj->countCapital(String);
-  cout << "Capital count is:" << iRet<<endl;
-
- sobj1->Display();
- // delete sobj;
+  delete sobj;
   
     return 0;
 }
